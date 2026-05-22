@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #000000;
+  --color-brand-orange: #ff9900;
+  --color-brand-orange-dark: #e68a00;
+  --color-brand-blue: #0047ab;
+  --color-brand-silver: #c0c0c0;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --shadow-glow-orange: 0 0 15px rgba(255, 153, 0, 0.5);
+  --shadow-glow-orange-lg: 0 0 30px rgba(255, 153, 0, 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-black font-body text-white antialiased;
+  }
+}
