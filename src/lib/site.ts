@@ -10,7 +10,7 @@ export const site = {
     "https://wa.me/33662498551?text=Bonjour%2C%20je%20souhaite%20une%20intervention%20serrurerie.",
   whatsappLabel: "WhatsApp",
   snapchat: "CAPI_DESCAPI",
-  email: "contact@capitainedepann.com",
+  email: "contact@capitainedepan.com",
   areaServed: "Île-de-France",
-  url: import.meta.env.VITE_SITE_URL ?? "https://capitainedepann.com",
+  url: import.meta.env.VITE_SITE_URL ?? "https://capitainedepan.com",
 } as const;
