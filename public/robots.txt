@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://capitaine-depann.fr/sitemap.xml
+Sitemap: https://capitainedepann.com/sitemap.xml

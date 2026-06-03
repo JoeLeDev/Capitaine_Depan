@@ -23,7 +23,7 @@ Le flyer complet reste sur l'accueil (`logo-flyer.png`).
 Ajoutez dans `.env` **un seul** des deux :
 
 ```env
-VITE_PLAUSIBLE_DOMAIN=votredomaine.fr
+VITE_PLAUSIBLE_DOMAIN=capitainedepann.com
 # ou
 VITE_GA4_ID=G-XXXXXXXXXX
 ```
@@ -44,7 +44,7 @@ cp .env.example .env
 
 ```env
 RESEND_API_KEY=re_...
-RESEND_FROM_EMAIL=Capitaine Depan <contact@votredomaine.fr>
+RESEND_FROM_EMAIL=Capitaine Depan <contact@capitainedepann.com>
 RESEND_TO_EMAIL=votre@email.fr
 ```
 
@@ -68,12 +68,24 @@ Les deux serveurs démarrent ensemble (`vite` + API Express).
 | `npm run build` | Build production statique  |
 | `npm run preview` | Prévisualiser le build     |
 
+## Domaine
+
+Site de production : **https://capitainedepann.com**
+
+Dans `.env` et sur Vercel :
+
+```env
+VITE_SITE_URL=https://capitainedepann.com
+```
+
 ## Déploiement (Vercel)
 
 1. Connectez le dépôt à Vercel
 2. Framework : **Vite**
-3. Ajoutez les variables d'environnement Resend dans le dashboard Vercel
-4. La route serverless `api/send-devis.ts` gère l'envoi en production
+3. Liez le domaine `capitainedepann.com` dans Vercel → Domains
+4. Ajoutez les variables d'environnement (Resend + `VITE_SITE_URL`)
+5. La route serverless `api/send-devis.ts` gère l'envoi en production
+6. [Google Search Console](https://search.google.com/search-console) → soumettre `https://capitainedepann.com/sitemap.xml`
 
 ## Contact (flyer)
 
