@@ -1,8 +1,8 @@
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SiWhatsapp } from "react-icons/si";
 import { site } from "../lib/site";
 import { AnimateIn } from "./AnimateIn";
+import { WhatsAppHeroButton } from "./WhatsAppContact";
 
 export function Hero() {
   return (
@@ -50,15 +50,7 @@ export function Hero() {
             <Phone className="h-5 w-5" aria-hidden />
             APPELER
           </a>
-          <a
-            href={site.whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-4 font-display text-xl tracking-wide text-white transition hover:opacity-90"
-          >
-            <SiWhatsapp className="h-5 w-5" aria-hidden />
-            WHATSAPP
-          </a>
+          <WhatsAppHeroButton />
           <Link
             to="/#devis"
             className="inline-flex items-center justify-center rounded-full border-2 border-brand-orange px-8 py-4 font-display text-xl tracking-wide text-brand-orange transition hover:bg-brand-orange/10"

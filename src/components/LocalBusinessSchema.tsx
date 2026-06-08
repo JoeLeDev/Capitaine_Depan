@@ -29,7 +29,9 @@ const schema = {
   },
   priceRange: "€€",
   sameAs: [
-    site.whatsappHref.split("?")[0],
+    ...(site.whatsappEnabled
+      ? [site.whatsappHref.split("?")[0]]
+      : []),
     `https://www.snapchat.com/add/${site.snapchat}`,
   ],
 };

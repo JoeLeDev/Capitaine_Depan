@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowRight, FileText, Phone, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { site } from "../lib/site";
 import { AnimateIn } from "./AnimateIn";
 
 type Step = {
@@ -13,9 +14,12 @@ const steps: Step[] = [
   {
     icon: Phone,
     step: "01",
-    title: "APPEL OU MESSAGE",
-    description:
-      "Contactez-nous par téléphone ou WhatsApp. On évalue votre situation et votre urgence.",
+    title: site.whatsappEnabled
+      ? site.whatsappStepTitle
+      : "VOUS NOUS APPELEZ",
+    description: site.whatsappEnabled
+      ? site.whatsappStepDescription
+      : "Contactez-nous par téléphone. On évalue votre situation et votre urgence.",
   },
   {
     icon: FileText,
