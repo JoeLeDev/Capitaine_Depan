@@ -1,6 +1,9 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!api/|favicon\\.ico|favicon-32x32\\.png|favicon-48x48\\.png|apple-touch-icon\\.png|logo\\.png|logo-flyer\\.png|robots\\.txt|sitemap\\.xml|assets/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
